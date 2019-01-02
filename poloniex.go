@@ -295,3 +295,17 @@ func (b *Poloniex) LendingHistory(start, end time.Time, limit int) (lendings []L
 
 	return
 }
+
+// Withdraw does what it says.
+func (b *Poloniex) Withdraw(currency, address string, amount float64) error {
+	amtStr := strconv.FormatFloat(amount, 'f', -1, 64)
+	_, err := b.client.doCommand("withdraw", map[string]string{
+		"currency": currency,
+		"address":  address,
+		"amount":   amtStr,
+	})
+	if err != nil {
+		return err
+	}
+	return nil
+}
