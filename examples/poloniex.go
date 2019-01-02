@@ -2,7 +2,7 @@ package main
 
 import (
 	"fmt"
-	"github.com/jyap808/go-poloniex"
+	"github.com/dangersalad/go-poloniex"
 )
 
 const (

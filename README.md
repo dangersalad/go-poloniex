@@ -8,7 +8,7 @@ Based off of https://github.com/toorop/go-bittrex/
 This library is more of a framework for some bots I use so it is expected that a lot of things don't work but pull requests are accepted.
 
 ## Import
-	import "github.com/jyap808/go-poloniex"
+	import "github.com/dangersalad/go-poloniex"
 
 ## Usage
 ~~~ go
@@ -16,7 +16,7 @@ package main
 
 import (
 	"fmt"
-	"github.com/jyap808/go-poloniex"
+	"github.com/dangersalad/go-poloniex"
 )
 
 const (
@@ -34,7 +34,7 @@ func main() {
 }
 ~~~
 
-See ["Examples" folder for more... examples](https://github.com/jyap808/go-poloniex/blob/master/examples/poloniex.go)
+See ["Examples" folder for more... examples](https://github.com/dangersalad/go-poloniex/blob/master/examples/poloniex.go)
 
 ## Stay tuned
 [Follow me on Twitter](https://twitter.com/jyap)
