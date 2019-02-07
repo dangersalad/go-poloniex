@@ -198,6 +198,17 @@ func (b *Poloniex) GetDepositsWithdrawals(start uint32, end uint32) (deposits []
 	return response.Deposits, response.Withdrawals, nil
 }
 
+func (b *Poloniex) GetDepositAddresses() (addresses map[string]string, err error) {
+	r, err := b.client.doCommand("returnDepositAddresses", nil)
+	if err != nil {
+		return nil, err
+	}
+	if err = json.Unmarshal(r, &addresses); err != nil {
+		return nil, err
+	}
+	return addresses, err
+}
+
 func (b *Poloniex) Buy(pair string, rate float64, amount float64, tradeType string) (TradeOrder, error) {
 	reqParams := map[string]string{
 		"currencyPair": pair, "rate": strconv.FormatFloat(rate, 'f', -1, 64),

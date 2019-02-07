@@ -5,6 +5,8 @@ import (
 	"github.com/dangersalad/go-poloniex"
 )
 
+var _ = fmt.Print
+
 const (
 	API_KEY    = ""
 	API_SECRET = ""
@@ -163,4 +165,7 @@ func main() {
 		fmt.Println(err, deposits)
 	*/
 
+	// Get Deposit Addresses
+	addresses, err := poloniex.GetDepositAddresses()
+	fmt.Println(err, addresses)
 }
